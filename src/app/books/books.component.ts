@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Book } from "../book";
 
 @Component({
   selector: 'books',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BooksComponent {
 
-  //constructor 
+  //constructor - Special Instance Method
 
   //Instance data members
   public books : Array<Book> = [
@@ -22,6 +23,11 @@ export class BooksComponent {
     this.books.push({ title : "", price : 0, author : ""});
   }
 
+  public deleteBook ( book: Book ){
+    const index =  this.books.indexOf(book);
+    this.books.splice(index, 1);
+  }
+
   //static data members'
   
   //static methods
@@ -30,8 +36,10 @@ export class BooksComponent {
 //TS : interface is used for 2 things
 // 1.  creating a type to be assigned to a variable so that the variable follows the rule of type
 // 2. it can provide functions to be implemented by class (like c++, c#, java)
+/*
 interface Book{
   title: string;
   price: number;
   author?: string; // "?" means author is option
 }
+*/

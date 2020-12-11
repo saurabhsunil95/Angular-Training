@@ -1,0 +1,31 @@
+<div *ngFor="let question of questions;let qi = index" class="question-box">
+
+    <div class="statement">
+        {{question.statement}}
+    </div>
+
+    <div>
+        <input type="radio" name="option_{{qi}}"/>
+        {{question.option1}}
+    </div>
+
+    <div>
+        <input type="radio" name="option_{{qi}}"/>
+        {{question.option2}}
+    </div>
+
+    <div>
+        <input type="radio" name="option_{{qi}}"/>
+        {{question.option3}}
+    </div>
+
+    <div>
+        <input type="radio" name="option_{{qi}}"/>
+        {{question.option4}}
+    </div>
+
+    <div class="marks">
+        {{question.marks}}
+    </div>
+
+</div>

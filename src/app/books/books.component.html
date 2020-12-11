@@ -1,5 +1,34 @@
-<div  *ngFor="let book of books" style="margin: 20px;border: 1px solid blue;padding: 10px;">
-    <div>{{book.title}}</div>
-    <div>{{book.author}}</div>
-    <div>{{book.price}}</div>
+<!-- <div *ngFor="let book of books;let bi = index" style="margin: 20px;border: 1px solid blue;padding: 10px;">
+    
+    <div style="margin: 10px;">Book - {{bi + 1}} </div>
+
+    <div style="margin: 10px;">{{book.title}}</div>
+
+    <div style="margin: 10px;">{{book.author}}</div>
+
+    <div style="margin: 10px;">{{book.price}}</div>
+
+</div> -->
+
+<div  *ngFor="let book of books;let bi = index;" style="margin: 20px;border: 1px solid blue;padding: 10px;">
+    <div style="margin: 10px;">Book - {{bi + 1}}</div>
+
+    <div style="margin: 10px">
+        <input type="text" class="textbox" [(ngModel)]="book.title"/>
+    </div>
+
+    <div style="margin: 10px">
+        <input type="text" class="textbox" [(ngModel)]="book.author"/>
+    </div>
+
+    <div style="margin: 10px">
+        <input type="text" class="textbox" [(ngModel)]="book.price"/>
+    </div>
+
+    <div style="margin: 10px;">
+        <button (click)="deleteBook(book)">Delete Book - {{book.title}}</button>
+    </div>
+
 </div>
+
+<button (click)="addNewBook()">Add New Book</button>

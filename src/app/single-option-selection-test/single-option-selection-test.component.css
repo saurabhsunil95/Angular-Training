@@ -1,0 +1,21 @@
+.question-box {
+    border: 1px solid brown;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.question-box div {
+    margin: 5px;
+    font-size: 18pt;
+}
+
+.question-box .statement {
+    color: blue;
+    font-size: 20pt;
+}
+
+.question-box .marks {
+    color: red;
+    font-size: 10pt;
+}

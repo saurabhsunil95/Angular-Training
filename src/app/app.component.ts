@@ -1,28 +1,4 @@
-import { Component, NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
-import { BooksComponent } from './books/books.component';
-import { CounterComponent } from './counter/counter.component';
-
-@NgModule({
-
-  declarations:[
-    AppComponent,
-    CounterComponent,
-    BooksComponent
-  ],
-
-  imports:[
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule
-  ],
-  
-  providers:[],
-  bootstrap:[AppComponent]
-})
-
+import { Component } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -30,4 +6,5 @@ import { CounterComponent } from './counter/counter.component';
 })
 export class AppComponent {
   
+  title = 'Welcome to angapp';
 }
